@@ -122,3 +122,39 @@ mysql> select * from AddressBook;
 +-----------+----------+-------------+-----------+------------+--------+-------------+---------------------+
 5 rows in set (0.00 sec)
 
+
+//UC6
+
+mysql> INSERT INTO AddressBook (firstName,lastName,address,city,state,zip,phoneNumber,email) VALUES
+    -> ('Shubham','Patil','JpNagar','Mumbai','Maharastra','576545','8144467381','shubhamp68@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from AddressBook;
++-----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
+| firstName | lastName | address     | city      | state      | zip    | phoneNumber | email                |
++-----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
+| Abhi      | Reddy    | Namapally   | Hyderabad | Telangana  | 500457 | 8176543222  | abhi11@gmail.com     |
+| Anup      | Kumar    | RRNagar     | Banglore  | Karnataka  | 560074 | 8073691947  | anupk8084@gmail.com  |
+| Deekshit  | Malhotra | RkColony    | Udhampur  | Jammu      | 180012 | 8765433754  | deekm21@gmail.com    |
+| Rushi     | Molkire  | ShivNagar   | Bidar     | Karnataka  | 560012 | 8123932881  | rushi.m@gmail.com    |
+| Sagar     | Hatte    | GaneshNagar | Pune      | Maharastra | 436543 | 8643055940  | sagarh24@gmail.com   |
+| Shubham   | Patil    | JpNagar     | Mumbai    | Maharastra | 576545 | 8144467381  | shubhamp68@gmail.com |
++-----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
+6 rows in set (0.00 sec)
+
+mysql> select * from AddressBook where city = 'Bidar';
++-----------+----------+-----------+-------+-----------+--------+-------------+-------------------+
+| firstName | lastName | address   | city  | state     | zip    | phoneNumber | email             |
++-----------+----------+-----------+-------+-----------+--------+-------------+-------------------+
+| Rushi     | Molkire  | ShivNagar | Bidar | Karnataka | 560012 | 8123932881  | rushi.m@gmail.com |
++-----------+----------+-----------+-------+-----------+--------+-------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> select * from AddressBook where state = 'Karnataka';
++-----------+----------+-----------+----------+-----------+--------+-------------+---------------------+
+| firstName | lastName | address   | city     | state     | zip    | phoneNumber | email               |
++-----------+----------+-----------+----------+-----------+--------+-------------+---------------------+
+| Anup      | Kumar    | RRNagar   | Banglore | Karnataka | 560074 | 8073691947  | anupk8084@gmail.com |
+| Rushi     | Molkire  | ShivNagar | Bidar    | Karnataka | 560012 | 8123932881  | rushi.m@gmail.com   |
++-----------+----------+-----------+----------+-----------+--------+-------------+---------------------+
+2 rows in set (0.00 sec)
