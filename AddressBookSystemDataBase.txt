@@ -58,3 +58,30 @@ mysql> DESCRIBE AddressBook;
 | email       | varchar(50)  | NO   |     | NULL    |       |
 +-------------+--------------+------+-----+---------+-------+
 8 rows in set (0.01 sec)
+
+
+//UC3
+
+mysql> INSERT INTO AddressBook (firstName,lastName,address,city,state,zip,phoneNumber,email) VALUES
+    -> ('Rushi','Molkire','ShivNagar','Bidar','Karnataka','560012','8123932881','rushi.m@gmail.com'),
+    -> ('Anup','Kumar','RRNagar','Banglore','Karnataka','560074','8073691947','anupk8084@gmail.com'),
+    -> ('Abhi','Reddy','Namapally','Hyderabad','Telangana','500457','8176543222','abhi11@gmail.com'),
+    -> ('Deekshit','Malhotra','RkColony','Udhampur','Jammu','180012','8765433754','deekm21@gmail.com'),
+    -> ('Sagar','Hatte','GaneshNagar','Pune','Maharastra','436543','7545635632','sagarh24@gmail.com'),
+    -> ('Shubham','Patil','JpNagar','Mumbai','Maharastra','576545','8144467381','shubhamp68@gmail.com');
+Query OK, 6 rows affected (0.01 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> select * from AddressBook;
++-----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
+| firstName | lastName | address     | city      | state      | zip    | phoneNumber | email                |
++-----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
+| Abhi      | Reddy    | Namapally   | Hyderabad | Telangana  | 500457 | 8176543222  | abhi11@gmail.com     |
+| Anup      | Kumar    | RRNagar     | Banglore  | Karnataka  | 560074 | 8073691947  | anupk8084@gmail.com  |
+| Deekshit  | Malhotra | RkColony    | Udhampur  | Jammu      | 180012 | 8765433754  | deekm21@gmail.com    |
+| Rushi     | Molkire  | ShivNagar   | Bidar     | Karnataka  | 560012 | 8123932881  | rushi.m@gmail.com    |
+| Sagar     | Hatte    | GaneshNagar | Pune      | Maharastra | 436543 | 7545635632  | sagarh24@gmail.com   |
+| Shubham   | Patil    | JpNagar     | Mumbai    | Maharastra | 576545 | 8144467381  | shubhamp68@gmail.com |
++-----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
+6 rows in set (0.00 sec)
+
