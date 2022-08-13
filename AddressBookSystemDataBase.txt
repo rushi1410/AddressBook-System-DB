@@ -200,3 +200,61 @@ mysql> SELECT firstName,lastName from addressBook ORDER BY city;
 +-----------+----------+
 6 rows in set (0.00 sec)
 
+//UC9
+
+mysql> alter table AddressBook add type varchar(20) after lastName;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc AddressBook;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| firstName   | varchar(50)  | NO   | PRI | NULL    |       |
+| lastName    | varchar(50)  | NO   |     | NULL    |       |
+| type        | varchar(20)  | YES  |     | NULL    |       |
+| address     | varchar(100) | NO   |     | NULL    |       |
+| city        | varchar(50)  | NO   |     | NULL    |       |
+| state       | varchar(50)  | NO   |     | NULL    |       |
+| zip         | varchar(50)  | NO   |     | NULL    |       |
+| phoneNumber | varchar(20)  | NO   |     | NULL    |       |
+| email       | varchar(50)  | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+mysql> update AddressBook set type = 'Family' where firstName ='Rushi';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update AddressBook set type = 'Student' where firstName='Sagar';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql>  update AddressBook set type = 'Teacher' where firstName='Shubham';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update AddressBook set type = 'Trainer' where firstName='Abhi';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update AddressBook set type = 'Engineer' where firstName='Anup';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update AddressBook set type = 'Engineer' where firstName='Deekshit';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from AddressBook;
++-----------+----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
+| firstName | lastName | type     | address     | city      | state      | zip    | phoneNumber | email                |
++-----------+----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
+| Abhi      | Reddy    | Trainer  | Namapally   | Hyderabad | Telangana  | 500457 | 8176543222  | abhi11@gmail.com     |
+| Anup      | Kumar    | Engineer | RRNagar     | Banglore  | Karnataka  | 560074 | 8073691947  | anupk8084@gmail.com  |
+| Deekshit  | Malhotra | Engineer | RkColony    | Udhampur  | Jammu      | 180012 | 8765433754  | deekm21@gmail.com    |
+| Rushi     | Molkire  | Family   | ShivNagar   | Bidar     | Karnataka  | 560012 | 8123932881  | rushi.m@gmail.com    |
+| Sagar     | Hatte    | Student  | GaneshNagar | Pune      | Maharastra | 436543 | 8643055940  | sagarh24@gmail.com   |
+| Shubham   | Patil    | Teacher  | JpNagar     | Mumbai    | Maharastra | 576545 | 8144467381  | shubhamp68@gmail.com |
++-----------+----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
+6 rows in set (0.00 sec)
