@@ -185,3 +185,18 @@ mysql> SELECT state,COUNT(state) as count from AddressBook group by state;
 +------------+-------+
 4 rows in set (0.00 sec)
 
+
+//UC8
+mysql> SELECT firstName,lastName from addressBook ORDER BY city;
++-----------+----------+
+| firstName | lastName |
++-----------+----------+
+| Anup      | Kumar    |
+| Rushi     | Molkire  |
+| Abhi      | Reddy    |
+| Shubham   | Patil    |
+| Sagar     | Hatte    |
+| Deekshit  | Malhotra |
++-----------+----------+
+6 rows in set (0.00 sec)
+
