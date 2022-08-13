@@ -258,3 +258,17 @@ mysql> select * from AddressBook;
 | Shubham   | Patil    | Teacher  | JpNagar     | Mumbai    | Maharastra | 576545 | 8144467381  | shubhamp68@gmail.com |
 +-----------+----------+----------+-------------+-----------+------------+--------+-------------+----------------------+
 6 rows in set (0.00 sec)
+
+//UC10
+
+mysql> select type, Count(type) from AddressBook group by type;
++----------+-------------+
+| type     | Count(type) |
++----------+-------------+
+| Trainer  |           1 |
+| Engineer |           2 |
+| Family   |           1 |
+| Student  |           1 |
+| Teacher  |           1 |
++----------+-------------+
+5 rows in set (0.00 sec)
