@@ -25,3 +25,36 @@ mysql> SELECT DATABASE();
 | addressbookservice |
 +--------------------+
 1 row in set (0.00 sec)  
+
+
+
+//UC2
+
+mysql> Create Table AddressBook
+    -> (
+    -> firstName varchar(50) NOT NULL,
+    -> lastName  varchar(50) NOT NULL,
+    -> address   varchar(100) NOT NULL,
+    -> city      varchar(50) NOT NULL,
+    -> state     varchar(50) NOT NULL,
+    -> zip       varchar(50) NOT NULL,
+    -> phoneNumber varchar(20) NOT NULL,
+    -> email     varchar(50) NOT NULL,
+    -> PRIMARY KEY (firstName)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> DESCRIBE AddressBook;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| firstName   | varchar(50)  | NO   | PRI | NULL    |       |
+| lastName    | varchar(50)  | NO   |     | NULL    |       |
+| address     | varchar(100) | NO   |     | NULL    |       |
+| city        | varchar(50)  | NO   |     | NULL    |       |
+| state       | varchar(50)  | NO   |     | NULL    |       |
+| zip         | varchar(50)  | NO   |     | NULL    |       |
+| phoneNumber | varchar(20)  | NO   |     | NULL    |       |
+| email       | varchar(50)  | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+8 rows in set (0.01 sec)
