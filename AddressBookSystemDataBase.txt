@@ -272,3 +272,29 @@ mysql> select type, Count(type) from AddressBook group by type;
 | Teacher  |           1 |
 +----------+-------------+
 5 rows in set (0.00 sec)
+
+//UC11
+
+mysql> INSERT INTO AddressBook (firstName,lastName,type,address,city,state,zip,phoneNumber,email) VALUES
+    -> ('Ashitosh','Molkire','Family','JayNagar','Banglore','Karnataka','560005','8055321531','ashitosh96@gmail.com');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO AddressBook (firstName,lastName,type,address,city,state,zip,phoneNumber,email) VALUES
+    -> ('Kartik','Gowda','Friend','VijayNagar','Bangalore','Karnataka','560011','8123649781','kartikg2498@gmail.com');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from AddressBook;
++-----------+----------+----------+-------------+-----------+------------+--------+-------------+-----------------------+
+| firstName | lastName | type     | address     | city      | state      | zip    | phoneNumber | email                 |
++-----------+----------+----------+-------------+-----------+------------+--------+-------------+-----------------------+
+| Abhi      | Reddy    | Trainer  | Namapally   | Hyderabad | Telangana  | 500457 | 8176543222  | abhi11@gmail.com      |
+| Anup      | Kumar    | Engineer | RRNagar     | Banglore  | Karnataka  | 560074 | 8073691947  | anupk8084@gmail.com   |
+| Ashitosh  | Molkire  | Family   | JayNagar    | Banglore  | Karnataka  | 560005 | 8055321531  | ashitosh96@gmail.com  |
+| Deekshit  | Malhotra | Engineer | RkColony    | Udhampur  | Jammu      | 180012 | 8765433754  | deekm21@gmail.com     |
+| Kartik    | Gowda    | Friend   | VijayNagar  | Bangalore | Karnataka  | 560011 | 8123649781  | kartikg2498@gmail.com |
+| Rushi     | Molkire  | Family   | ShivNagar   | Bidar     | Karnataka  | 560012 | 8123932881  | rushi.m@gmail.com     |
+| Sagar     | Hatte    | Student  | GaneshNagar | Pune      | Maharastra | 436543 | 8643055940  | sagarh24@gmail.com    |
+| Shubham   | Patil    | Teacher  | JpNagar     | Mumbai    | Maharastra | 576545 | 8144467381  | shubhamp68@gmail.com  |
++-----------+----------+----------+-------------+-----------+------------+--------+-------------+-----------------------+
+8 rows in set (0.00 sec)
+
