@@ -363,3 +363,46 @@ mysql> desc contacts_relation;
 +-----------+-------------+------+-----+---------+-------+
 2 rows in set (0.00 sec)
 
+//UC13
+
+mysql> select count(contacts.firstname) from contacts,contacts_Address,Address where contacts.firstname = contacts_Address.firstname and contacts_Address.zip = Address.zip and Address.state = 'Telangana';
++---------------------------+
+| count(contacts.firstname) |
++---------------------------+
+|                         0 |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(contacts.firstname) from contacts,contacts_Address,Address where contacts.firstname = contacts_Address.firstname and contacts_Address.zip = Address.zip and Address.state = 'Maharastra';
++---------------------------+
+| count(contacts.firstname) |
++---------------------------+
+|                         0 |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(contacts.firstname) from contacts,contacts_Address,Address where contacts.firstname = contacts_Address.firstname and contacts_Address.zip = Address.zip and Address.state = 'Karnataka';
++---------------------------+
+| count(contacts.firstname) |
++---------------------------+
+|                         0 |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(contacts.firstname) from contacts,contacts_Address,Address where contacts.firstname = contacts_Address.firstname and contacts_Address.zip = Address.zip and Address.state = 'Jammu';
++---------------------------+
+| count(contacts.firstname) |
++---------------------------+
+|                         0 |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> select type, Count(firstName) from contacts_relation group by type;
++---------+------------------+
+| type    | Count(firstName) |
++---------+------------------+
+| Family  |                2 |
+| Friend  |                1 |
+| Student |                1 |
++---------+------------------+
+3 rows in set (0.00 sec)
